@@ -1,6 +1,6 @@
-'From Cuis7.5 [latest update: #7471] on 4 September 2025 at 9:07:13 am'!
+'From Cuis7.5 [latest update: #7637] on 12 October 2025 at 4:14:24 pm'!
 'Description '!
-!provides: 'Commander' 1 8!
+!provides: 'Commander' 1 9!
 SystemOrganization addCategory: #Commander!
 
 
@@ -56,6 +56,10 @@ commandMethods
 	^ Smalltalk allSelect: [:m | m pragmas anySatisfy: [:p | p key == cmdPragma ]]. 
 
 ! !
+
+!CommandBuilder methodsFor: 'accessing' stamp: 'hlsf 10/12/2025 16:07:16'!
+model
+	^ model! !
 
 !CommandBuilder methodsFor: 'accessing' stamp: 'hlsf 7/23/2022 23:06:03'!
 model: aModel
