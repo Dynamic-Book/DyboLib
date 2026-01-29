@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7819] on 29 January 2026 at 11:01:08 am'!
+'From Cuis7.7 [latest update: #7819] on 29 January 2026 at 12:05:38 pm'!
 'Description '!
-!provides: 'CuisFrench' 1 1!
+!provides: 'CuisFrench' 1 2!
 SystemOrganization addCategory: #CuisFrench!
 
 
@@ -14,14 +14,6 @@ Color variableWordSubclass: #Couleur
 Couleur class
 	instanceVariableNames: ''!
 
-
-!Couleur methodsFor: 'transformations' stamp: 'hlsf 26/Oct/2025 11:53:27'!
-éclaircir
-	^ self lighter ! !
-
-!Couleur methodsFor: 'transformations' stamp: 'hlsf 26/Oct/2025 11:52:58'!
-foncer
-	^ self darker! !
 
 !Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:50:21'!
 blanc
@@ -1008,6 +1000,14 @@ suivant
 	"incrémente un entier"
 
 	^self + 1.! !
+
+!Color methodsFor: '*CuisFrench' stamp: 'hlsf 29/Jan/2026 11:24:05'!
+éclaircir
+	^ self lighter ! !
+
+!Color methodsFor: '*CuisFrench' stamp: 'hlsf 29/Jan/2026 11:24:53'!
+foncer
+	^ self darker! !
 
 !Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:36:20'!
 afficher: unObjet
