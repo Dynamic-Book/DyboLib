@@ -1,6 +1,6 @@
-'From Cuis7.5 [latest update: #7671] on 26 October 2025 at 12:05:11 pm'!
+'From Cuis7.7 [latest update: #7819] on 29 January 2026 at 11:01:08 am'!
 'Description '!
-!provides: 'CuisFrench' 1 0!
+!provides: 'CuisFrench' 1 1!
 SystemOrganization addCategory: #CuisFrench!
 
 
@@ -15,55 +15,59 @@ Couleur class
 	instanceVariableNames: ''!
 
 
-!Couleur methodsFor: 'transformations' stamp: 'hlsf 10/26/2025 11:53:27'!
+!Couleur methodsFor: 'transformations' stamp: 'hlsf 26/Oct/2025 11:53:27'!
 éclaircir
 	^ self lighter ! !
 
-!Couleur methodsFor: 'transformations' stamp: 'hlsf 10/26/2025 11:52:58'!
+!Couleur methodsFor: 'transformations' stamp: 'hlsf 26/Oct/2025 11:52:58'!
 foncer
 	^ self darker! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:50:21'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:50:21'!
 blanc
 	^ self white! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:46:45'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:46:45'!
 bleu
 	^ self blue! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:50:29'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:50:29'!
 gris
 	^ self gray! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:49:56'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:49:56'!
 jaune
 	^ self yellow! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:47:42'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:47:42'!
 marron
 	^ self brown ! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:50:36'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:50:36'!
 noir
 	^ self black! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:48:16'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 29/Jan/2026 11:00:48'!
+pourpre
+	^ self purple ! !
+
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:48:16'!
 rose
 	^ self pink! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:45:30'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:45:30'!
 rouge
 	^ self red! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 11:48:00'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 11:48:00'!
 vert
 	^ self green! !
 
-!Couleur class methodsFor: 'named colors' stamp: 'hlsf 10/26/2025 12:03:24'!
+!Couleur class methodsFor: 'named colors' stamp: 'hlsf 26/Oct/2025 12:03:24'!
 white
 	^ self white! !
 
-!Object methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:31:23'!
+!Object methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:31:23'!
 afficher
 	self print! !
 
@@ -72,7 +76,7 @@ ajouter: unObjet
 
 	^self add: unObjet.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:32:43'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:32:43'!
 ajouter: unObjet fois: unEntier
 
 	unEntier foisRépéter: [self ajouter: unObjet].! !
@@ -92,7 +96,7 @@ arrondir
 
 	^self rounded.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:43:09'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:43:09'!
 auCarré
 
 	^self squared.! !
@@ -102,7 +106,7 @@ auHasard
 
 	^self atRandom.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:43:21'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:43:21'!
 aucunNeVérifie: unBloc
 
 	^self noneSatisfy: unBloc.! !
@@ -161,7 +165,7 @@ effectifs
 	cles do: [ :n | table at: n put: (self count: [ :t | t=n])].
 	^table.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:45:02'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:45:02'!
 effectifsEnClasses: unEntier
 	"construit une table pour histogramme"
 
@@ -172,32 +176,32 @@ effectifsEnClasses: unEntier
 	cles do: [ :n | table at: n put: (self count: [ :t | (t>=n) and: [t<(n+h)]])].
 	^table.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:57:34'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:57:34'!
 enCollectionOrdonnée
 
 	^self asOrderedCollection.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:57:52'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:57:52'!
 enCollectionTriée
 
 	^self asSortedCollection.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:57:59'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:57:59'!
 enDictionnaire
 
 	^self asDictionary.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:58:07'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:58:07'!
 enEnsemble
 
 	^self asSet.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:58:23'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:58:23'!
 enSac
 
 	^self asBag.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:58:39'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:58:39'!
 enTableau
 
 	^self asArray.! !
@@ -207,7 +211,7 @@ estVide
 
 	^self isEmpty.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:58:23'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:58:23'!
 échantillonDeTaille: unEntier 
 
 	"tirage au hasard sans remise"
@@ -223,7 +227,7 @@ estVide
 		 ].
 	^ech.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:45:02'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:45:02'!
 étendue
 
 	^self range.! !
@@ -233,7 +237,7 @@ faire: unBloc
 	
 	^self do: unBloc.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:45:12'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:45:12'!
 fréquences
 	"construit une table de fréquences"
 
@@ -244,7 +248,7 @@ fréquences
 	cles do: [ :n | table at: n put: ((self count: [ :t | t=n])/total)].
 	^table.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:45:22'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:45:22'!
 fréquencesEnClasses: unEntier
 	"construit une table pour histogramme"
 
@@ -286,12 +290,12 @@ moyenne
 
 	^self average.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:46:24'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:46:24'!
 opposés
 
 	^self negated.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:57:52'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:57:52'!
 premierQuartile
 
 	^(self enCollectionTriée Q1).! !
@@ -341,7 +345,7 @@ retirerToutDans: uneCollection
 
 	^self removeAll: uneCollection.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:47:22'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:47:22'!
 réduire: unBloc
 
 	^self reduce: unBloc.! !
@@ -366,7 +370,7 @@ total
 
 	^self sum.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:47:01'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:47:01'!
 tousVérifient: unBloc
 
 	^self allSatisfy: unBloc.! !
@@ -381,17 +385,17 @@ trierSelon: unBloc
 	
 	^self sorted: unBloc.! !
 
-!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:46:38'!
+!Collection methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:46:38'!
 unVérifie: unBloc
 
 	^self anySatisfy: unBloc.! !
 
-!Array methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:48:38'!
+!Array methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:48:38'!
 à: unIndice
 	
 	^self at: unIndice.! !
 
-!Array methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:36:03'!
+!Array methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:36:03'!
 à: unIndice mettre: unObjet
 	
 	^self at: unIndice put: unObjet.! !
@@ -419,11 +423,11 @@ enMajuscule
 enMinuscule
 	^self asLowercase! !
 
-!String methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:27'!
+!String methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:27'!
 enNombre
 	^ self asNumber! !
 
-!String methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:34:29'!
+!String methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:34:29'!
 formater: uneCollection
 	^ self format: uneCollection! !
 
@@ -445,11 +449,11 @@ de: unArgument de: unAutre
 de: unArgument de: unAutre de: unTroisieme
 	^self value: unArgument value: unAutre value: unTroisieme.! !
 
-!BlockClosure methodsFor: '*CuisFrench' stamp: 'hlsf 1/3/2024 11:05:57'!
+!BlockClosure methodsFor: '*CuisFrench' stamp: 'hlsf 3/Jan/2024 11:05:57'!
 de: unArgument de: unAutre de: unTroisieme de: unQuatrieme
 	^self value: unArgument value: unAutre value: unTroisieme value: unQuatrieme .! !
 
-!BlockClosure methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:42:27'!
+!BlockClosure methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:42:27'!
 jusquàVrai: unBloc
 
 	^self whileFalse: unBloc.! !
@@ -488,7 +492,7 @@ valeur: unArgument valeur: unAutre
 valeur: unArgument valeur: unAutre valeur: unTroisieme	
 	^self value: unArgument value: unAutre value: unTroisieme.! !
 
-!BlockClosure methodsFor: '*CuisFrench' stamp: 'hlsf 1/3/2024 11:06:08'!
+!BlockClosure methodsFor: '*CuisFrench' stamp: 'hlsf 3/Jan/2024 11:06:08'!
 valeur: unArgument valeur: unAutre valeur: unTroisieme	 valeur: unQuatrieme
 	^self value: unArgument value: unAutre value: unTroisieme value: unQuatrieme .! !
 
@@ -534,7 +538,7 @@ siVrai: leBlocDuVrai siFaux: leBlocDuFaux
 
 	^self ifTrue: leBlocDuVrai ifFalse: leBlocDuFaux.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:29:20'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:29:20'!
 afficherEnBase: UneBase
 
 	^self printStringBase: UneBase.! !
@@ -551,20 +555,20 @@ Par exemple 2 racine arrondirA:  0.01 répond 1.41"
 
 	^self roundTo: UnNombre .! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:49:40'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:49:40'!
 arrondirParDéfautA: UnNombre
 "répond l'arrondi par défaut;
 par exemple, 2 racine arrondirExcesA: 0.01 répond 1.41"
 	
 	^self roundDownTo: UnNombre! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:50:39'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:50:39'!
 arrondirParExcèsA: UnNombre
 "répond l'arrondi à l'excès;
 par exemple, 2 racine arrondirExcesA: 0.01 répond 1.42"
 	^self roundUpTo: UnNombre! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:43:09'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:43:09'!
 auCarré
 
 	^self squared.! !
@@ -574,23 +578,23 @@ auCube
 
 	^self puissance: 3.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:48:38'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:48:38'!
 à: UnNombre
 
 	^self to: UnNombre.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:48:53'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:48:53'!
 à: UnNombre faire: UnBloc
 	"boucle à condition de sortie"
 
 	^self to: UnNombre do: UnBloc.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:48:59'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:48:59'!
 à: UnNombre par: UnPas
 "répond un intervalle avec un pas"
 	^self to: UnNombre by: UnPas.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:49:09'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:49:09'!
 à: UnNombre par: UnPas faire: UnBloc
 
 	^self to: UnNombre by: UnPas do: UnBloc.! !
@@ -601,22 +605,22 @@ cosinus
 	
 	^self degreeCos.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:52:37'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:52:37'!
 degrés
 
 	^self radiansToDegrees.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:58:58'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:58:58'!
 enDécimal
 
 	^self asFloat.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:08'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:08'!
 enEntier
 
 	^self asInteger.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:27'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:27'!
 enNombre
 
 	^self asNumber.! !
@@ -627,7 +631,7 @@ enPourcents
 			(self * 100) storeOn: str.
 			str nextPutAll: ' %'].! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:53:03'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:53:03'!
 estDécimal
 
 	^(self isFloat).! !
@@ -697,12 +701,12 @@ nanosecondes
 
 	^self nanoSeconds.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:53:25'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:53:25'!
 négatif
 	
 	^self negative.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:53:33'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:53:33'!
 opposé
 
 	^self negated.! !
@@ -712,11 +716,11 @@ pair
 	
 	^self even.! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:53:48'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:53:48'!
 partieDécimale
 	^self fractionPart! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:54:01'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:54:01'!
 partieEntière
 	^self integerPart! !
 
@@ -751,7 +755,7 @@ racine
 racineCubique
 	^self nthRoot: 3! !
 
-!Number methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:54:15'!
+!Number methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:54:15'!
 racineNième: unEntier
 	^self nthRoot: unEntier.! !
 
@@ -806,22 +810,22 @@ tronquerA: UnNombre
 Par exemple, 2 racine tronquerA: 0.01 renvoie 1.41"
 	^ self truncateTo: UnNombre! !
 
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:36'!
+!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:36'!
 enFraction
 
 	^self asFraction.! !
 
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:44'!
+!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:44'!
 enFractionApprochée
 
 	^self asApproximateFraction ! !
 
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:52'!
+!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:52'!
 enVraieFraction
 
 	^self asTrueFraction.! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:54:01'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:54:01'!
 aLancienne
 	"répond la fraction à l'ancienne, avec partie entière"
 
@@ -830,7 +834,7 @@ aLancienne
 	b _ self partieDécimale.
 	^(a asString),'+',(b asString).! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:58:39'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:58:39'!
 aLegyptienne
 	"répond la fraction comme somme de fractions égyptiennes
 	soit de numérateurs 1;
@@ -858,12 +862,12 @@ de: unNombre
 
 	^self * unNombre.! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:31:40'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:31:40'!
 dénominateur
 
 	^self denominator.! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 12:00:05'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 12:00:05'!
 enPari
 	"répond la fraction comme probabilité"
 
@@ -877,7 +881,7 @@ enPari
 	c _ c,(self dénominateur - self numérateur) asString.
 	^c! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 12:00:37'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 12:00:37'!
 enProba
 	"répond la fraction comme probabilité"
 
@@ -896,12 +900,12 @@ estUnePuissanceDe2
 
 	^self isPowerOfTwo.! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:32:14'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:32:14'!
 numérateur
 
 	^self numerator.! !
 
-!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:30:42'!
+!Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:30:42'!
 réduite
 
 	^self reduced.! !
@@ -923,7 +927,7 @@ enChiffresRomains
 
 	^self printStringRoman.! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 10/26/2025 11:59:36'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:36'!
 enFraction
 
 	^self asFraction.! !
@@ -948,12 +952,12 @@ estProbablementPremier
 
 	^self isProbablyPrime.! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:43:09'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:43:09'!
 estUnCarré
 	
 	^(self auCarré estEntier).! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:38:39'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:38:39'!
 facteursPremiers
 	^ Integer primesUpTo: self! !
 
@@ -962,7 +966,7 @@ factorielle
 
 	^self factorial.! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:32:43'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:32:43'!
 foisRépéter: unBloc
 
 	^self timesRepeat: unBloc.! !
@@ -973,7 +977,7 @@ multiples: n
 	^ Array streamContents: [:str |
 		1 to: n do: [ :i | str nextPut: i * self ]]! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:41:26'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:41:26'!
 nombreDeChiffres
 
 	^self numberOfDigitsInBase: 10! !
@@ -993,7 +997,7 @@ ppmc: unEntier
 
 	^self lcm: unEntier.! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 12/21/2022 14:33:59'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:33:59'!
 précèdent
 	"décrémente un entier"
 
@@ -1005,22 +1009,22 @@ suivant
 
 	^self + 1.! !
 
-!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:36:20'!
+!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:36:20'!
 afficher: unObjet
 	^ self show: unObjet; newLine ! !
 
-!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:37:07'!
+!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:37:07'!
 effacer
 	^self clear.! !
 
-!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 9/28/2022 17:55:34'!
+!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 28/Sep/2022 17:55:34'!
 espace
 	^self space! !
 
-!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 12/26/2022 16:37:13'!
+!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 26/Dec/2022 16:37:13'!
 montrer: unObjet
 	^self show: unObjet! !
 
-!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 9/28/2022 17:55:42'!
+!Transcript class methodsFor: '*CuisFrench' stamp: 'hlsf 28/Sep/2022 17:55:42'!
 retourLigne
 	^ self cr! !
