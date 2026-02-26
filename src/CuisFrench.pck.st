@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7840] on 26 February 2026 at 10:28:46 am'!
+'From Cuis7.7 [latest update: #7840] on 26 February 2026 at 10:42:51 am'!
 'Description '!
-!provides: 'CuisFrench' 1 3!
+!provides: 'CuisFrench' 1 5!
 SystemOrganization addCategory: #CuisFrench!
 
 
@@ -802,15 +802,15 @@ tronquerA: UnNombre
 Par exemple, 2 racine tronquerA: 0.01 renvoie 1.41"
 	^ self truncateTo: UnNombre! !
 
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Feb/2026 10:25:39'!
+!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Feb/2026 10:42:33'!
 enFraction
 
-	^self asApproximateFraction.! !
+	^self asApproximateFraction! !
 
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:52'!
+!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Feb/2026 10:42:29'!
 enVraieFraction
 
-	^self asTrueFraction.! !
+	^self asTrueFraction! !
 
 !Fraction methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:54:01'!
 aLancienne
@@ -939,10 +939,10 @@ estProbablementPremier
 
 	^self isProbablyPrime.! !
 
-!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:43:09'!
+!Integer methodsFor: '*CuisFrench' stamp: 'hlsf 26/Feb/2026 10:37:06'!
 estUnCarré
 	
-	^(self auCarré estEntier).! !
+	^ self racine estEntier! !
 
 !Integer methodsFor: '*CuisFrench' stamp: 'hlsf 21/Dec/2022 14:38:39'!
 facteursPremiers
