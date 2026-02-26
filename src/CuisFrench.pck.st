@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7819] on 29 January 2026 at 12:05:38 pm'!
+'From Cuis7.7 [latest update: #7840] on 26 February 2026 at 10:28:46 am'!
 'Description '!
-!provides: 'CuisFrench' 1 2!
+!provides: 'CuisFrench' 1 3!
 SystemOrganization addCategory: #CuisFrench!
 
 
@@ -802,15 +802,10 @@ tronquerA: UnNombre
 Par exemple, 2 racine tronquerA: 0.01 renvoie 1.41"
 	^ self truncateTo: UnNombre! !
 
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:36'!
+!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Feb/2026 10:25:39'!
 enFraction
 
-	^self asFraction.! !
-
-!Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:44'!
-enFractionApprochée
-
-	^self asApproximateFraction ! !
+	^self asApproximateFraction.! !
 
 !Float methodsFor: '*CuisFrench' stamp: 'hlsf 26/Oct/2025 11:59:52'!
 enVraieFraction
