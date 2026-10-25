@@ -1,6 +1,6 @@
 'From Cuis7.5 [latest update: #7637] on 12 October 2025 at 4:14:24 pm'!
 'Description '!
-!provides: 'Commander' 1 9!
+!provides: 'Commander' '1.9.0'!
 SystemOrganization addCategory: #Commander!
 
 

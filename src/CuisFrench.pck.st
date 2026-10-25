@@ -1,6 +1,6 @@
 'From Cuis7.7 [latest update: #7840] on 26 February 2026 at 10:42:51 am'!
 'Description '!
-!provides: 'CuisFrench' 1 5!
+!provides: 'CuisFrench' '1.5.0'!
 SystemOrganization addCategory: #CuisFrench!
 
 
